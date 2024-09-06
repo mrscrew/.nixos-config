@@ -2,6 +2,9 @@
   dconf = {
     enable = true;
     settings = {
+    "org/gnome/desktop/background" = {
+      picture-uri = "file://$HOME/background.jpg";
+    };
     "org/gnome/desktop/interface" = {
       gtk-theme = "Numix";
       icon-theme = "Numix";

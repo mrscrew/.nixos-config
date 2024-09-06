@@ -80,9 +80,11 @@
     home-manager # Управление конфигурацией
 
     # Гном расширения   
+    gnomeExtensions.blur-my-shell
     gnomeExtensions.settingscenter # Центр настроек GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME
     gnomeExtensions.gsconnect # GNOME версия KDE Connect
+    gnomeExtensions.tophat
   ];
 
   # Шрифты

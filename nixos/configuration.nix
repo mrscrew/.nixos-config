@@ -34,6 +34,8 @@
     };
   };
 
+  users.users.root.hashedPassword = "!";
+
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
     automatic = true;

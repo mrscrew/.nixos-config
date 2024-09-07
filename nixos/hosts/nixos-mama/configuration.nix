@@ -1,22 +1,18 @@
 { inputs, ... }: {
+  # Импорт аппаратной конфигурации и дополнительных модулей
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
-    ./modules/bundle.nix
+    ../../packages.nix
+    ../../modules/bundle.nix
   ];
 
-  #  disabledModules = [
-  #    ./modules/xserver.nix
-  #  ];
+  # Определение имени хоста
+  networking.hostName = "nixos-mama";
 
-  #nixpkgs.overlays = [ inputs.polymc.overlay ];
+  # Установка часового пояса
+  time.timeZone = "Europe/Moscow";
 
-  # Define your hostname.
-  networking.hostName = "nixos-master";
-
-  time.timeZone = "Europe/Moscow"; # Set your time zone.
-
-  # Select internationalisation properties.
+  # Локализация и языковые настройки
   i18n = {
     defaultLocale = "ru_RU.UTF-8";
     supportedLocales = [ "ru_RU.UTF-8/UTF-8" ];
@@ -34,23 +30,22 @@
     };
   };
 
+  # Отключение пароля для root
   users.users.root.hashedPassword = "!";
 
-  # Perform garbage collection weekly to maintain low disk usage
+  # Автоматическая очистка системы (garbage collection) каждую неделю
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 1w";
   };
 
-  # Optimize storage
-  # You can also manually optimize the store via:
-  #    nix-store --optimise
-  # Refer to the following link for more details:
-  # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
+  # Автоматическая оптимизация хранилища Nix
   nix.settings.auto-optimise-store = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+  # Включение экспериментальных функций (flakes)
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "24.05"; # Don't change it bro
+  # Версия состояния системы, используемая для обратной совместимости
+  system.stateVersion = "24.05";
 }

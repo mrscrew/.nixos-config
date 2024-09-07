@@ -14,19 +14,20 @@
   fileSystems = {
     "/" =
       {
-        device = "/dev/disk/by-uuid/e632ac6b-309c-4099-884c-f53782818f55"; # UUID корневой файловой системы
-        fsType = "ext4"; # Тип файловой системы
+        device = "/dev/disk/by-uuid/2989154e-0289-4c6b-a401-63fd358f719b";
+        fsType = "btrfs";
+        options = [ "subvol=@" ];
       };
     "/boot/efi" =
       {
-        device = "/dev/disk/by-uuid/42AF-6EE5"; # UUID EFI-раздела
-        fsType = "vfat"; # Тип файловой системы EFI
-        options = [ "fmask=0022" "dmask=0022" ]; # Параметры масок для прав доступа
+        device = "/dev/disk/by-uuid/284B-4617";
+        fsType = "vfat";
+        options = [ "fmask=0022" "dmask=0022" ];
       };
     "/home" =
       {
-        device = "/dev/disk/by-uuid/cd7c1f3f-2083-7908-5a0c-ee26dcd34dcb"; # UUID раздела Home
-        fsType = "ext4"; # Тип файловой системы
+        device = "/dev/disk/by-uuid/b8f7aab8-9604-4ec8-91a0-de7282961f88";
+        fsType = "btrfs";
       };
   };
   swapDevices = [ ]; # Определение устройств подкачки

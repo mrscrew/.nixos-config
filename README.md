@@ -84,6 +84,6 @@ nix-collect-garbage -d
 
 ## Скриншот
 
-![Screenshot](./background.png)
+![Screenshot](./screenshot.png)
 
 ---

@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./zsh.nix
+    ./orca-slicer.nix
     ../../modules/bundle.nix
   ];
   home = {

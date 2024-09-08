@@ -79,6 +79,7 @@
 
     # Другие утилиты
     home-manager # Управление конфигурацией
+    megasync # Клиент для синхронизации с облаком MEGA
 
     # Гном расширения   
     gnomeExtensions.blur-my-shell

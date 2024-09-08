@@ -10,6 +10,5 @@
     ./xserver.nix
     ./virtmanager.nix
     ./env.nix
-    ./user.nix
   ];
 }

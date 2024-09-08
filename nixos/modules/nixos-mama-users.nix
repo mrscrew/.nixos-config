@@ -12,7 +12,6 @@
     };
 
     users.mama = {
-      group = "mama";
       isNormalUser = true;
       description = "Маманя";
       extraGroups = [ "networkmanager" ];

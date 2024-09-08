@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../packages.nix
+    ../../modules/nixos-master-users.nix
     ../../modules/bundle.nix
   ];
 

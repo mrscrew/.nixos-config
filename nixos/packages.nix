@@ -66,7 +66,8 @@
       ];
     })
     prusa-slicer
-
+    orca-slicer
+    
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix
     numix-icon-theme # Тема иконок Numix

@@ -82,6 +82,7 @@
     home-manager # Управление конфигурацией
     megasync # Клиент для синхронизации с облаком MEGA
     telegram-desktop
+    wineWowPackages.waylandFull
 
     # Гном расширения   
     gnomeExtensions.blur-my-shell

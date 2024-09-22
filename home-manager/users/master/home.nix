@@ -12,7 +12,7 @@
     stateVersion = "24.05";          # Версия состояния для обратной совместимости
     file = {
       "background.jpg".source = ./background.jpg;  # Добавление background.jpg в домашнюю директорию
-      "/var/lib/AccountsService/icons/master".source = ./avatar.jpg;  # Меняю avatar
+      "avatar.jpg".source = ./avatar.jpg;  # Добавление avatar.jpg в домашнюю директорию
     };
   };
 }

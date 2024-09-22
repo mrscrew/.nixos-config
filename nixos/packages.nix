@@ -37,17 +37,19 @@
 
     # Утилиты
     bluez # Поддержка Bluetooth
-    bluez-tools # Утилиты для Bluetooth
+    bluez-tools # Утилиты для работы с Bluetooth
     dconf-editor # Редактор настроек Dconf
-    file # Утилита для работы с файлами
+    file # Утилита для определения типа файлов
     git # Система управления версиями
     htop # Мониторинг процессов
-    nano # Текстовый редактор (возможно добавить, если требуется)
+    nano # Текстовый редактор
     ntfs3g # Поддержка NTFS
-    scrot # Скриншотер
-    unzip # Распаковка ZIP-архивов
-    wget # Командная утилита для загрузки файлов в интернете
+    scrot # Утилита для создания скриншотов
+    tree # Вывод структуры каталогов
+    unzip # Утилита для распаковки ZIP-архивов
+    wget # Утилита для загрузки файлов из интернета
     zram-generator # Генерация сжатых блочных устройств
+
 
     # Пакеты для разработки
     git # Система управления версиями
@@ -66,7 +68,7 @@
       ];
     })
     prusa-slicer
-    
+
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix
     numix-icon-theme # Тема иконок Numix
@@ -84,12 +86,13 @@
     wineWowPackages.waylandFull
     winetricks
 
-    # Гном расширения   
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.settingscenter # Центр настроек GNOME
+    # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME
+    gnomeExtensions.blur-my-shell # Размытие фона в GNOME
     gnomeExtensions.gsconnect # GNOME версия KDE Connect
-    gnomeExtensions.tophat
+    gnomeExtensions.settingscenter # Центр настроек GNOME
+    gnomeExtensions.tophat # Расширение для дополнительной настройки
+
   ];
 
   # Шрифты

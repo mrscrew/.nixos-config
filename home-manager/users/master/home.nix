@@ -1,8 +1,7 @@
 { pkgs, ... }: {
   # Импорт конфигураций
   imports = [
-    ./zsh.nix          # Настройки Zsh
-    ./orca-slicer.nix   # Конфигурация OrcaSlicer
+    ./zsh.nix                 # Настройки Zsh
     ../../modules/bundle.nix  # Дополнительные модули
   ];
 
@@ -11,5 +10,8 @@
     username = "master";             # Имя пользователя
     homeDirectory = "/home/master";  # Путь к домашней директории пользователя
     stateVersion = "24.05";          # Версия состояния для обратной совместимости
+    file = {
+      "background.jpg".source = ./background.jpg;  # Добавление background.jpg в домашнюю директорию
+    };
   };
 }

@@ -6,10 +6,6 @@
         # Установка обои пользователя
         picture-uri = "file:///home/master/background.jpg";
       };
-      "org/gnome/login-screen" = {
-        # Установка аватара пользователя
-        logo = "file:///home/master/avatar.jpg";
-      };
       "org/gnome/desktop/interface" = {
         gtk-theme = "Numix";
         icon-theme = "Numix";

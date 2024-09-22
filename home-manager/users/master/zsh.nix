@@ -14,6 +14,11 @@
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}.#nixos-master";
         upd = "nix flake update ${flakeDir}";
         upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}.#nixos-master";
+        
+        # Автоматизация работы с флейками
+        flks = "nix flake show ${flakeDir}";    # Показать информацию о флейке
+        flkc = "nix flake check ${flakeDir}";   # Проверяет валидность флейка.
+        flku = "nix flake update ${flakeDir}";  # Обновить флейк
 
         hms = "home-manager switch --flake ${flakeDir}.#master";
 

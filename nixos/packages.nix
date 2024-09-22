@@ -50,7 +50,6 @@
     wget # Утилита для загрузки файлов из интернета
     zram-generator # Генерация сжатых блочных устройств
 
-
     # Пакеты для разработки
     git # Система управления версиями
     nixpkgs-fmt # Форматирование Nix конфигураций
@@ -67,6 +66,8 @@
         { name = "remote-ssh-edit"; publisher = "ms-vscode-remote"; version = "0.47.2"; sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g"; }
       ];
     })
+
+    # 3D Печать
     prusa-slicer
 
     # Темы и иконки

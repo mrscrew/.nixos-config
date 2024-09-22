@@ -19,7 +19,7 @@
         flkc = "nix flake check ${flakeDir}";   # Проверяет валидность флейка.
         flku = "nix flake update ${flakeDir}";  # Обновить флейк
 
-        hms = "home-manager switch --flake ${flakeDir}.#master";
+        hms = "home-manager switch --flake ${flakeDir}/.#master";
 
         conf = "nano ${flakeDir}/nixos/hosts/nixos-master/configuration.nix";
         pkgs = "nano ${flakeDir}/nixos/packages.nix";

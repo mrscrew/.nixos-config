@@ -10,15 +10,25 @@
         flakeDir = "~/.nixos-config";
       in
       {
-        rb = "sudo nixos-rebuild switch --flake ${flakeDir}.#nixos-master";
-        upd = "nix flake update ${flakeDir}";
-        upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}.#nixos-master";
-        
-        # Автоматизация работы с флейками
-        flks = "nix flake show ${flakeDir}";    # Показать информацию о флейке
-        flkc = "nix flake check ${flakeDir}";   # Проверяет валидность флейка.
-        flku = "nix flake update ${flakeDir}";  # Обновить флейк
+        # Очистка системы от мусора
+        gc = "sudo nix-collect-garbage -d"; # Очистка системы от мусора
 
+        # Обновить систему и пересобрать конфигурацию для определенной системы
+        upg() {
+        echo "Введите название flake:"  # Запросить название flake
+        read flake_name                 # Сохранить ввод в переменную
+        sudo nix-channel --update && \
+        sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name
+        };
+
+        rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
+
+        # Автоматизация работы с флейками
+        flks = "nix flake show ${flakeDir}"; # Показать информацию о флейке
+        flkc = "nix flake check ${flakeDir}"; # Проверяет валидность флейка.
+        flku = "nix flake update ${flakeDir}"; # Обновить флейк
+
+        # Автоматизация работы с home-manager
         hms = "home-manager switch --flake ${flakeDir}/.#master";
 
         conf = "nano ${flakeDir}/nixos/hosts/nixos-master/configuration.nix";

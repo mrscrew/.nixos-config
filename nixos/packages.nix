@@ -67,9 +67,6 @@
       ];
     })
 
-    # 3D Печать
-    prusa-slicer
-
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix
     numix-icon-theme # Тема иконок Numix

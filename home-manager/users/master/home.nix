@@ -15,4 +15,7 @@
       "avatar.jpg".source = ./avatar.jpg;  # Добавление avatar.jpg в домашнюю директорию
     };
   };
+  home.packages = with pkgs; [
+    prusa-slicer
+  ];
 }

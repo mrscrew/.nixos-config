@@ -17,7 +17,7 @@
     file = {
       "background.jpg".source = ./background.jpg; # Добавление background.jpg в домашнюю директорию
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
-      ".nix-profile/share/PrusaSlicer/localization/be/PrusaSlicer.mo".source = "./PrusaSlicer.mo"
+      ".nix-profile/share/PrusaSlicer/localization/be/PrusaSlicer.mo".source = "./PrusaSlicer.mo";
         };
     };
   }

@@ -10,5 +10,6 @@
       device = "nodev";
       useOSProber = true;
     };
+    timeout = 1;
   };
 }

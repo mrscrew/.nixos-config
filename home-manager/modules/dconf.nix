@@ -4,11 +4,11 @@
     settings = {
       "org/gnome/desktop/background" = {
         # Установка обои пользователя
-        picture-uri = "file://$HOME/background.jpg";
+        picture-uri = "file:///home/master/background.jpg";
       };
       "org/gnome/login-screen" = {
         # Установка аватара пользователя
-        logo = "file://$HOME/avatar.jpg";
+        logo = "file:///home/master/avatar.jpg";
       };
       "org/gnome/desktop/interface" = {
         gtk-theme = "Numix";

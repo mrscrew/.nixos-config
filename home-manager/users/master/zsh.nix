@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # enableAutosuggestions = true;
+    enableAutosuggestions = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
@@ -11,19 +11,17 @@
         flakeDir = "~/.nixos-config";
       in
       {
-        rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
+        rb = "sudo nixos-rebuild switch --flake ${flakeDir}.#nixos-master";
         upd = "nix flake update ${flakeDir}";
-        upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+        upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}.#nixos-master";
 
-        hms = "home-manager switch --flake ${flakeDir}";
+        hms = "home-manager switch --flake ${flakeDir}.#master";
 
-        conf = "nvim ${flakeDir}/nixos/configuration.nix";
-        pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+        conf = "nano ${flakeDir}/nixos/hosts/nixos-master/configuration.nix";
+        pkgs = "nano ${flakeDir}/nixos/packages.nix";
 
         ll = "ls -l";
-        v = "nvim";
-        se = "sudoedit";
-        ff = "fastfetch";
+        no = "nano";
       };
 
     history.size = 10000;

@@ -66,7 +66,6 @@
       ];
     })
     prusa-slicer
-    orca-slicer
     
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix
@@ -82,6 +81,8 @@
     home-manager # Управление конфигурацией
     megasync # Клиент для синхронизации с облаком MEGA
     telegram-desktop
+    wineWowPackages.waylandFull
+    winetricks
 
     # Гном расширения   
     gnomeExtensions.blur-my-shell

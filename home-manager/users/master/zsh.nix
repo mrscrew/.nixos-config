@@ -14,8 +14,11 @@
         gc = "sudo nix-collect-garbage -d"; # Очистка системы от мусора
 
         # Обновить систему и пересобрать конфигурацию для определенной системы
-        upg = "echo Введите название flake: && read flake_name && \
-         sudo nix-channel --update && sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name";
+        upg = "echo Произвожу очитку от мусора && gc && \
+              echo Введите название обновляемой системы: && read flake_name && \
+              echo Обновляю каналы && sudo nix-channel --update && \
+              echo Пересобираю конфигурасию для $flake_name && \
+              sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name";
 
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
 

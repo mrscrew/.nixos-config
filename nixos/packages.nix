@@ -82,6 +82,7 @@
     megasync # Клиент для синхронизации с облаком MEGA
     telegram-desktop
     wineWowPackages.waylandFull
+    winetrix
 
     # Гном расширения   
     gnomeExtensions.blur-my-shell

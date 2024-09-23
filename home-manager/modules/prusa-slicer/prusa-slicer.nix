@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }:{
   home.packages = with pkgs; [
     prusa-slicer.overrideAttrs
     (prusaSlicerAttrs: {

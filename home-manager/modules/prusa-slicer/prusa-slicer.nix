@@ -5,7 +5,7 @@ let
     prusa-slicer = super.prusa-slicer.overrideAttrs (oldAttrs: {
       postInstall = oldAttrs.postInstall + ''
         mkdir -p $out/share/PrusaSlicer/localization/be
-        cp ${./my-be-file.po} $out/share/PrusaSlicer/localization/be/
+        cp ${my-be-file} $out/share/PrusaSlicer/localization/be/
       '';
     });
   };
@@ -18,5 +18,5 @@ in
   nixpkgs.overlays = [ myOverlay ];
 
   # Указываем путь к файлу локализации
-  my-be-file.po = ./PrusaSlicer.mo;
+  my-be-file = ./PrusaSlicer.mo;
 }

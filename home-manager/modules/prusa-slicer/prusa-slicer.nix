@@ -1,7 +1,7 @@
-{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    prusa-slicer.overrideAttrs (prusaSlicerAttrs: {
+    prusa-slicer.overrideAttrs
+    (prusaSlicerAttrs: {
       # ... (другие настройки)
       localization = {
         be = {

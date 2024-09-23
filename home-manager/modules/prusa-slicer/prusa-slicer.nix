@@ -5,7 +5,6 @@ let
   psOverlay = self: super: {
     prusa-slicer = super.prusa-slicer.overrideAttrs (oldAttrs: {
       postInstall = oldAttrs.postInstall + ''
-        mkdir -p $out/share/PrusaSlicer/localization/be
         cp ${./PrusaSlicer.mo} $out/share/PrusaSlicer/localization/be/
       '';
     });

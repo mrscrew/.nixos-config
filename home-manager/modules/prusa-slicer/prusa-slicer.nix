@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 let
-  # Добавляем оверлей для модификации prusa-slicer
-  psOverlay = self: super: {
+  myOverlay = self: super: {
     prusa-slicer = super.prusa-slicer.overrideAttrs (oldAttrs: {
       postInstall = oldAttrs.postInstall + ''
-        cp ${./PrusaSlicer.mo} $out/share/PrusaSlicer/localization/be/
+        mkdir -p $out/share/PrusaSlicer/localization/be
+        cp ${./my-be-file.po} $out/share/PrusaSlicer/localization/be/
       '';
     });
   };
@@ -15,9 +15,8 @@ in
     prusa-slicer
   ];
 
-  # Применяем наш оверлей
-  pkgs.overlays = [ psOverlay ];
+  nixpkgs.overlays = [ myOverlay ];
 
-  # Указываем путь к файлу локализации, который хотим добавить
-  PrusaSlicer.mo = ./PrusaSlicer.mo;
+  # Указываем путь к файлу локализации
+  my-be-file.po = ./PrusaSlicer.mo;
 }

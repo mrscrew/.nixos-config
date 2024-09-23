@@ -16,5 +16,4 @@
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
   };
-
 }

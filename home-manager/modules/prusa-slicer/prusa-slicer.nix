@@ -17,7 +17,7 @@ in
   ];
 
   # Применяем наш оверлей
-  nixpkgs.overlays = [ psOverlay ];
+  pkgs.overlays = [ psOverlay ];
 
   # Указываем путь к файлу локализации, который хотим добавить
   PrusaSlicer.mo = ./PrusaSlicer.mo;

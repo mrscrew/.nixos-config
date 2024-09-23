@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 let
+  # Путь к файлу локализации
+  my-be-file = ./PrusaSlicer.mo;
+
+  # Оверлей для модификации пакета prusa-slicer
   myOverlay = self: super: {
     prusa-slicer = super.prusa-slicer.overrideAttrs (oldAttrs: {
       postInstall = oldAttrs.postInstall + ''
@@ -15,8 +19,7 @@ in
     prusa-slicer
   ];
 
-  # Указываем путь к файлу локализации
-  my-be-file = ./PrusaSlicer.mo;
-
+  # Подключение оверлея
   nixpkgs.overlays = [ myOverlay ];
 }
+

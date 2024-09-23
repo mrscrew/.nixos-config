@@ -15,8 +15,8 @@ in
     prusa-slicer
   ];
 
-  nixpkgs.overlays = [ myOverlay ];
-
   # Указываем путь к файлу локализации
   my-be-file = ./PrusaSlicer.mo;
+
+  nixpkgs.overlays = [ myOverlay ];
 }

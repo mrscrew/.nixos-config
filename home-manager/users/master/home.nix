@@ -5,8 +5,8 @@
     ../../modules/bundle.nix # Дополнительные модули
   ];
 
-  nixpkgs = {
-    allowUnfree = [ "yandex-browser" ];
+  nixpkgs.config = {
+    allowUnfree = true;
   };
 
   # Основные настройки для пользователя

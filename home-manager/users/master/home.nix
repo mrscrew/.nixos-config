@@ -3,7 +3,6 @@
   imports = [
     ./zsh.nix # Настройки Zsh
     ../../modules/bundle.nix # Дополнительные модули
-    ../../modules/prusa-slicer/prusa-slicer.nix
   ];
 
   # Основные настройки для пользователя

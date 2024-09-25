@@ -78,8 +78,7 @@
     numix-icon-theme-circle # Круглая тема иконок Numix
     numix-cursor-theme # Тема курсора Numix
 
-    # Пакеты для Kvantum и тем
-    kvantum # Утилита Kvantum для Qt
+    qt5ct # Утилита для управления темами Qt5
     adwaita-qt-theme # Тема Adwaita для Kvantum
     materia-kde-theme # Тема Materia для Kvantum
 

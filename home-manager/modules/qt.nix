@@ -1,21 +1,15 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "kvantum"; # Используем Kvantum как платформенную тему
-    style.name = "kvantum"; # Используем Kvantum как стиль
+    platformTheme.name = "qt5ct"; # Указываем qt5ct как платформенную тему
+    style.name = "Adwaita"; # Используем Kvantum как стиль
   };
 
-  # Конфигурация для Kvantum
+  # Конфигурация для qt5ct
   xdg.configFile = {
-    "Kvantum/kvantum.kvconfig".text = ''
+    "qt5ct/qt5ct.conf".text = ''
       [General]
-      theme=Adwaita  # Устанавливаем Adwaita Kvantum по умолчанию
+      theme=Adwaita  # Устанавливаем тему Adwaita по умолчанию
     '';
-
-    # Поддержка темы Adwaita Kvantum
-    "Kvantum/Adwaita".source = "${pkgs.adwaita-qt-theme}/share/Kvantum/Adwaita";
-
-    # Поддержка темы Materia Kvantum
-    "Kvantum/Materia".source = "${pkgs.materia-kde-theme}/share/Kvantum/Materia";
   };
 }

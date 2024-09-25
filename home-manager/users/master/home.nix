@@ -11,7 +11,7 @@
       "yandex-browser-stable-24.7.1.1120-1"
     ];
   };
-  
+
   # Основные настройки для пользователя
   home = {
     username = "master"; # Имя пользователя
@@ -22,7 +22,7 @@
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
     packages = with pkgs; [
-      yandex-browser
+      #yandex-browser
     ];
   };
 }

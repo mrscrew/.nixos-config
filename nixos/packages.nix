@@ -37,7 +37,7 @@
 
     # Интернет-приложения
     telegram-desktop # Клиент для Telegram
-    transmission # Клиент для торрентов
+    transmission_4 # Клиент для торрентов
     whatsapp-for-linux # Клиент для WhatsApp
 
     # Утилиты

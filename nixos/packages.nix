@@ -16,24 +16,29 @@
 
   environment.systemPackages = with pkgs; [
     # Графические редакторы
-    evince # Просмотрщик документов
-    cheese # Инструмент для веб-камеры
     freecad # 3D CAD модельный инструмент
     gimp # Редактор растровой графики (возможно добавить, если требуется)
+
+    # Мультимедиа
+    cheese # Инструмент для веб-камеры
+    ffmpeg # Мультимедийный фреймворк
+    gnome-music # Музыкальный плеер GNOME
     gnome-photos # Просмотр изображений
     gnome-terminal # Терминал GNOME
     gnome-tweaks # Настройка GNOME
-
-    # Мультимедиа
-    ffmpeg # Мультимедийный фреймворк
-    gnome-music # Музыкальный плеер GNOME
-    gnome-music # Музыкальный плеер GNOME
     mpv # Мультимедийный плеер (возможно добавить, если требуется)
     totem # Видеоплеер GNOME
     vlc # Мультимедийный плеер VLC
 
     # Офисные приложения
+    evince # Просмотрщик документов
     libreoffice-qt6-fresh # Офисный пакет LibreOffice
+    megasync # Клиент для синхронизации с облаком MEGA
+
+    # Интернет-приложения
+    telegram-desktop # Клиент для Telegram
+    transmission # Клиент для торрентов
+    whatsapp-for-linux # Клиент для WhatsApp
 
     # Утилиты
     bluez # Поддержка Bluetooth
@@ -73,16 +78,19 @@
     numix-icon-theme-circle # Круглая тема иконок Numix
     numix-cursor-theme # Тема курсора Numix
 
+    # Пакеты для Kvantum и тем
+    kvantum # Утилита Kvantum для Qt
+    adwaita-qt-theme # Тема Adwaita для Kvantum
+    materia-kde-theme # Тема Materia для Kvantum
+
     # Установка звуковых систем
     pipewire # Звуковая система PipeWire
     pulseaudio # Звуковая система PulseAudio
 
     # Другие утилиты
     home-manager # Управление конфигурацией
-    megasync # Клиент для синхронизации с облаком MEGA
-    telegram-desktop
-    wineWowPackages.waylandFull
-    winetricks
+    wineWowPackages.waylandFull # Пакет Wine с поддержкой WoW64 и Wayland
+    winetricks # Утилита для управления настройками Wine
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

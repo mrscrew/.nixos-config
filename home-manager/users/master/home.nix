@@ -14,7 +14,7 @@
       "background.jpg".source = ./background.jpg; # Добавление background.jpg в домашнюю директорию
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
-    nixpkgs = {
+    pkgs = {
       allowUnfree = [ "yandex-browser" ];
     };
     packages = with pkgs; [

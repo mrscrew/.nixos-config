@@ -14,5 +14,8 @@
       "background.jpg".source = ./background.jpg; # Добавление background.jpg в домашнюю директорию
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
+    packages = with pkgs; [
+      yandex-browser
+    ];
   };
 }

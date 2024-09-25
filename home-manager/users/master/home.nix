@@ -5,6 +5,10 @@
     ../../modules/bundle.nix # Дополнительные модули
   ];
 
+  nixpkgs = {
+    allowUnfree = [ "yandex-browser" ];
+  };
+
   # Основные настройки для пользователя
   home = {
     username = "master"; # Имя пользователя
@@ -13,9 +17,6 @@
     file = {
       "background.jpg".source = ./background.jpg; # Добавление background.jpg в домашнюю директорию
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
-    };
-    pkgs = {
-      allowUnfree = [ "yandex-browser" ];
     };
     packages = with pkgs; [
       yandex-browser

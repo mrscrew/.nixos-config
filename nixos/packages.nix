@@ -79,8 +79,8 @@
     numix-cursor-theme # Тема курсора Numix
 
     qt5ct # Утилита для управления темами Qt5
-    adwaita-qt-theme # Тема Adwaita для Kvantum
-    materia-kde-theme # Тема Materia для Kvantum
+    adwaita-qt # Тема Adwaita
+    materia-theme # Тема Materia
 
     # Установка звуковых систем
     pipewire # Звуковая система PipeWire

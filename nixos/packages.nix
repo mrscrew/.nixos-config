@@ -90,6 +90,8 @@
     home-manager # Управление конфигурацией
     wineWowPackages.waylandFull # Пакет Wine с поддержкой WoW64 и Wayland
     winetricks # Утилита для управления настройками Wine
+    prusa-slicer
+    orca-slicer
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

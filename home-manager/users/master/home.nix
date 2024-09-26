@@ -25,6 +25,7 @@
     };
     packages = with pkgs; [
       #orca-slicer
+      openscad
     ];
   };
 }

@@ -32,6 +32,10 @@
         # Автоматизация работы с home-manager
         hms = "home-manager switch --flake ${flakeDir}/.#master";
 
+        # Список установленных програм
+        lsapps = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
+        lsappu = "nix-env --query";
+
         conf = "nano ${flakeDir}/nixos/hosts/nixos-master/configuration.nix";
         pkgs = "nano ${flakeDir}/nixos/packages.nix";
 

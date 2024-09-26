@@ -22,6 +22,7 @@
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
     packages = with pkgs; [
+      orcaslicer.i18n.ru-RU
     ];
   };
 }

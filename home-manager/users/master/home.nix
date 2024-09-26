@@ -12,6 +12,8 @@
     ];
   };
 
+  nixpkgs.overlays = [ (import ../../modules/orca-slicer-overlay.nix) ];
+
   # Основные настройки для пользователя
   home = {
     username = "master"; # Имя пользователя
@@ -22,6 +24,7 @@
       "avatar.jpg".source = ./avatar.jpg; # Добавление avatar.jpg в домашнюю директорию
     };
     packages = with pkgs; [
+      orca-slicer
     ];
   };
 }

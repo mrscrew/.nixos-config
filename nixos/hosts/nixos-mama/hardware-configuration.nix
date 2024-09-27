@@ -10,8 +10,8 @@
   boot.initrd.kernelModules = [ ]; # Модули ядра для инициализации RAM-диска
   boot.kernelModules = [ "kvm-intel" ]; # Поддержка виртуализации Intel
   boot.extraModulePackages = [ ]; # Дополнительные пакеты модулей ядра
-  boot.kernel.sysctl = { "vm.dirty_bytes" = 2097152; "vm.dirty_background_bytes" = 2097152; }; # Для правильного отображения скорости при копировании
-  boot.supportedFilesystems = [ "ntfs" ]; # Чтобы система видела файловую систему ntfs
+  #boot.kernel.sysctl = { "vm.dirty_bytes" = 2097152; "vm.dirty_background_bytes" = 2097152; }; # Для правильного отображения скорости при копировании
+  #boot.supportedFilesystems = [ "ntfs" ]; # Чтобы система видела файловую систему ntfs
 
   fileSystems = {
     "/" =

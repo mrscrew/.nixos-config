@@ -16,7 +16,6 @@
 
   environment.systemPackages = with pkgs; [
     # Графические редакторы
-    freecad # 3D CAD модельный инструмент
     gimp # Редактор растровой графики (возможно добавить, если требуется)
 
     # Мультимедиа
@@ -26,19 +25,12 @@
     gnome-photos # Просмотр изображений
     gnome-terminal # Терминал GNOME
     gnome-tweaks # Настройка GNOME
-    mpv # Мультимедийный плеер (возможно добавить, если требуется)
     totem # Видеоплеер GNOME
     vlc # Мультимедийный плеер VLC
 
     # Офисные приложения
     evince # Просмотрщик документов
     libreoffice-qt6-fresh # Офисный пакет LibreOffice
-    megasync # Клиент для синхронизации с облаком MEGA
-
-    # Интернет-приложения
-    telegram-desktop # Клиент для Telegram
-    transmission_4-gtk # Клиент для торрентов
-    whatsapp-for-linux # Клиент для WhatsApp
 
     # Утилиты
     bluez # Поддержка Bluetooth
@@ -54,23 +46,6 @@
     unzip # Утилита для распаковки ZIP-архивов
     wget # Утилита для загрузки файлов из интернета
     zram-generator # Генерация сжатых блочных устройств
-
-    # Пакеты для разработки
-    git # Система управления версиями
-    nixpkgs-fmt # Форматирование Nix конфигураций
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        davidanson.vscode-markdownlint # Линтер для Markdown
-        jnoortheen.nix-ide # Поддержка Nix в VS Code
-        ms-azuretools.vscode-docker # Поддержка Docker
-        ms-ceintl.vscode-language-pack-ru # Русский языковой пакет
-        ms-python.python # Поддержка Python
-        ms-vscode-remote.remote-ssh # Поддержка удаленного SSH
-        redhat.vscode-yaml # Поддержка YAML
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        { name = "remote-ssh-edit"; publisher = "ms-vscode-remote"; version = "0.47.2"; sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g"; }
-      ];
-    })
 
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix
@@ -88,10 +63,6 @@
 
     # Другие утилиты
     home-manager # Управление конфигурацией
-    wineWowPackages.waylandFull # Пакет Wine с поддержкой WoW64 и Wayland
-    winetricks # Утилита для управления настройками Wine
-    prusa-slicer
-    orca-slicer
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

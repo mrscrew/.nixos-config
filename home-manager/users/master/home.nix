@@ -37,6 +37,7 @@
       # Пакеты для разработки
       git # Система управления версиями
       nixpkgs-fmt # Форматирование Nix конфигураций
+      diffuse # Графический инструмент для слияния и сравнения текстовых файлов
       (vscode-with-extensions.override {
         vscodeExtensions = with vscode-extensions; [
           davidanson.vscode-markdownlint # Линтер для Markdown

@@ -55,7 +55,6 @@
       # 3D-печать
       orca-slicer # Слайсер для 3D-печати
       prusa-slicer # Слайсер для 3D-печати
-      super-slicer-latest # Форк PrusaSlicer с большим количеством функций и более быстрым циклом развития
 
       # Дополнительные утилиты
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland

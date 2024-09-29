@@ -8,7 +8,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
-      "yandex-browser-stable-24.7.1.1120-1"
+      "yandex-browser-stable-24.7.3.1253-1"
     ];
   };
 

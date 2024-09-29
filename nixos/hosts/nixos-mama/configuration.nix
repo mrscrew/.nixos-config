@@ -49,8 +49,7 @@
 
   # Разрешение сборки пакетов с несвободными лицензиями
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "yandex-browser-stable-24.7.3.1253-1"
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "yandex-browser-stable"
   ];
 

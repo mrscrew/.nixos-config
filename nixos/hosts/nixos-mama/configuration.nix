@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, lib, ... }: {
   # Импорт аппаратной конфигурации и дополнительных модулей
   imports = [
     ./hardware-configuration.nix

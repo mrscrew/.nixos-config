@@ -49,7 +49,6 @@
 
   # Разрешение сборки пакетов с несвободными лицензиями
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config = { allowUnfree = true; };
 
   nixpkgs.config.permittedInsecurePackages = [ "yandex-browser-stable-24.7.3.1253-1" ];
 

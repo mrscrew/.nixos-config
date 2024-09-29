@@ -47,6 +47,9 @@
   # Включение экспериментальных функций (flakes)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Разрешение сборки пакетов с несвободными лицензиями
+  nixpkgs.config = { allowUnfree = true; };
+
   # Версия состояния системы, используемая для обратной совместимости
   system.stateVersion = "24.05";
 }

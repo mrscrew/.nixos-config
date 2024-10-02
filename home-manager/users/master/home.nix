@@ -59,7 +59,7 @@
       # Дополнительные утилиты
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland
       winetricks # Настройка Wine
-      lutris-unwrapped
+      bottles-unwrapped
     ];
   };
 }

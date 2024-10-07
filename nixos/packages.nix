@@ -12,6 +12,8 @@
     package = pkgs.gnomeExtensions.gsconnect; # Гном версия KDE Connect
   };
 
+  programs.appimage.binfmt = true;
+
   programs.firefox.enable = true; # Устанавливаем Firefox
 
   environment.systemPackages = with pkgs; [

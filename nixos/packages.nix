@@ -50,6 +50,8 @@
     unzip # Утилита для распаковки ZIP-архивов
     wget # Утилита для загрузки файлов из интернета
     zram-generator # Генерация сжатых блочных устройств
+    appimage-run
+    webkitgtk
 
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix

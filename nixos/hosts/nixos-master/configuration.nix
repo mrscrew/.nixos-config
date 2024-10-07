@@ -12,6 +12,7 @@
 
   # Установка часового пояса
   time.timeZone = "Europe/Moscow";
+  time.hardwareClockInLocalTime = true;
 
   # Локализация и языковые настройки
   i18n = {

@@ -3,6 +3,7 @@
   imports = [
     ./zsh.nix # Настройки Zsh
     ../../modules/bundle.nix # Дополнительные модули
+    ../../modules/orca-slicer-bin.nix # Дополнительные модули
   ];
 
   nixpkgs.config = {

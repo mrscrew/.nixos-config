@@ -26,7 +26,7 @@ appimageTools.wrapType2
     at-spi2-core
     fontconfig
     pango
-    gtk+3
+    gtk3
     glibc
     gcc
     ayatana-ido

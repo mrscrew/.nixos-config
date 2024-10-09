@@ -4,7 +4,7 @@
     ./zsh.nix # Настройки Zsh
     ../../modules/bundle.nix # Дополнительные модули
     ../../modules/orca-slicer/default.nix # orca-slicer
-    ../../modules/hiddify/default.nix # hiddify-next
+    ../../modules/hiddify-next/default.nix # hiddify-next
   ];
 
   nixpkgs.config = {

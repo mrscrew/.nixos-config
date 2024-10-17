@@ -1,3 +1,7 @@
+# default.nix
+# { pkgs ? import <nixpkgs> {} }:
+# pkgs.callPackage ./orca-slicer.nix {}
+
 { pkgs, ... }:
 
 let

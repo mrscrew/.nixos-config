@@ -41,10 +41,9 @@ appimageTools.wrapType2
 
   extraInstallCommands = ''
     install -m 444 -D ${appimageContents}/hiddify.desktop $out/share/applications/hiddify.desktop
-    # install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/128x128/apps/hiddify.png \
-    #   $out/share/icons/hicolor/128x128/apps/hiddify.png
-    # install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256/apps/hiddify.png \
-    #   $out/share/icons/hicolor/256x256/apps/hiddify.png
-    cp -r ${appimageContents}/usr/share/icons $out/share
+    install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/128x128/apps/hiddify.png \
+      $out/share/icons/hicolor/128x128/apps/hiddify.png
+    install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256/apps/hiddify.png \
+      $out/share/icons/hicolor/256x256/apps/hiddify.png
    '';
 }

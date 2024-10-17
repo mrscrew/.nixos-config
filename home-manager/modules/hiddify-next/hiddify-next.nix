@@ -13,7 +13,7 @@ let
   appimageContents = appimageTools.extract {
     inherit pname version src;
     postExtract = ''
-      substituteInPlace $out/hiddify.desktop --replace 'Exec=AppRun' 'Exec=${pname} %u'
+      substituteInPlace $out/hiddify.desktop --replace 'Exec=LD_LIBRARY_PATH=usr/lib hiddify' 'Exec=${pname}'
     '';
   };
 in
@@ -45,5 +45,6 @@ appimageTools.wrapType2
       $out/share/icons/hicolor/128x128/apps/hiddify.png
     install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256/apps/hiddify.png \
       $out/share/icons/hicolor/256x256/apps/hiddify.png
+    gtk-update-icon-cache
    '';
 }

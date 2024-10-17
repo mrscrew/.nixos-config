@@ -45,6 +45,5 @@ appimageTools.wrapType2
       $out/share/icons/hicolor/128x128/apps/hiddify.png
     install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256/apps/hiddify.png \
       $out/share/icons/hicolor/256x256/apps/hiddify.png
-    gtk-update-icon-cache
    '';
 }

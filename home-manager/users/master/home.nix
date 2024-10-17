@@ -56,7 +56,7 @@
       dbeaver-bin
 
       # 3D-печать
-      prusa-slicer # Слайсер для 3D-печати
+      #prusa-slicer # Слайсер для 3D-печати
 
       # Дополнительные утилиты
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland

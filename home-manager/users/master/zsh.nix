@@ -21,6 +21,13 @@
               echo Обновляю каналы && sudo nix-channel --update && \
               echo Пересобираю конфигурасию для $flake_name && \
               sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name";
+        
+        upgc = "#!/usr/bin/env bash \
+              set -euo pipefail && \
+              before_update=$(nix build --no-link --print-out-paths .) && \
+              nix flake update ${flakeDir} && \
+              after_update=$(nix build --no-link --print-out-paths .) && \
+              nix store diff-closures ${before_update} ${after_update}";
 
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
 

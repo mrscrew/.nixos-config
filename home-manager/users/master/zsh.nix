@@ -22,8 +22,7 @@
               echo Пересобираю конфигурасию для $flake_name && \
               sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name";
         
-        upgc = "#!/usr/bin/env bash \
-              set -euo pipefail && \
+        upgc = "set -euo pipefail && \
               before_update=$(nix build --no-link --print-out-paths .) && \
               nix flake update ${flakeDir} && \
               after_update=$(nix build --no-link --print-out-paths .) && \

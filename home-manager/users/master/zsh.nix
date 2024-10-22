@@ -27,7 +27,7 @@
               before_update=$(nix build --no-link --print-out-paths .) && \
               nix flake update ${flakeDir} && \
               after_update=$(nix build --no-link --print-out-paths .) && \
-              nix store diff-closures ${before_update} ${after_update}";
+              nix store diff-closures '$before_update' '$after_update'";
 
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
 

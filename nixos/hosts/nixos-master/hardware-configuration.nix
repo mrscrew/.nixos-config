@@ -29,7 +29,16 @@
         fsType = "ext4"; # Тип файловой системы
       };
   };
-  swapDevices = [ ]; # Определение устройств подкачки
+  swapDevices = [
+    {
+      device = "/dev/sdb4";
+    }
+  ]; # Определение устройств подкачки
+  boot.resumeDevice = "/dev/sdb4";
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=1h
+  '';
+
 
   networking.useDHCP = lib.mkDefault true; # Включить DHCP для всех интерфейсов
   # networking.interfaces.enp0s25.useDHCP = lib.mkDefault true; # Включить DHCP для конкретного интерфейса (закомментировано)

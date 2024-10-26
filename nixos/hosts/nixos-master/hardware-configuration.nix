@@ -36,7 +36,7 @@
   ]; # Определение устройств подкачки
   boot.resumeDevice = "/dev/sdb4";
   systemd.sleep.extraConfig = ''
-    HibernateDelaySec=1h
+    HibernateDelaySec=1s
   '';
 
 

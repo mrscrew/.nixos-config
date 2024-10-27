@@ -31,7 +31,7 @@
       openscad # Программируемый 3D CAD-моделлер
 
       # Интернет и коммуникация
-      megasync # Синхронизация с облаком MEGA
+      # megasync # Синхронизация с облаком MEGA
       telegram-desktop # Мессенджер Telegram
       transmission_4-gtk # Торрент-клиент
       whatsapp-for-linux # Клиент WhatsApp
@@ -61,7 +61,6 @@
       # Дополнительные утилиты
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland
       winetricks # Настройка Wine
-      bottles-unwrapped
     ];
   };
 }

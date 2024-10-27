@@ -14,8 +14,6 @@
     ];
   };
 
-  #nixpkgs.overlays = [ (import ../../modules/orca-slicer-overlay.nix) ];
-
   # Основные настройки для пользователя
   home = {
     username = "master"; # Имя пользователя
@@ -31,7 +29,7 @@
       openscad # Программируемый 3D CAD-моделлер
 
       # Интернет и коммуникация
-      # megasync # Синхронизация с облаком MEGA
+      megasync # Синхронизация с облаком MEGA
       telegram-desktop # Мессенджер Telegram
       transmission_4-gtk # Торрент-клиент
       whatsapp-for-linux # Клиент WhatsApp

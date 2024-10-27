@@ -19,7 +19,7 @@
       };
     "/boot/efi" =
       {
-        device = "/dev/disk/by-label/boot"; # UUID EFI-раздела
+        device = "/dev/disk/by-label/BOOT"; # UUID EFI-раздела
         fsType = "vfat"; # Тип файловой системы EFI
         options = [ "fmask=0022" "dmask=0022" ]; # Параметры масок для прав доступа
       };

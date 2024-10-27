@@ -14,27 +14,27 @@
   fileSystems = {
     "/" =
       {
-        device = "/dev/disk/by-uuid/e632ac6b-309c-4099-884c-f53782818f55"; # UUID корневой файловой системы
+        device = "/dev/disk/by-label/nixos"; # UUID корневой файловой системы
         fsType = "ext4"; # Тип файловой системы
       };
     "/boot/efi" =
       {
-        device = "/dev/disk/by-uuid/42AF-6EE5"; # UUID EFI-раздела
+        device = "/dev/disk/by-label/boot"; # UUID EFI-раздела
         fsType = "vfat"; # Тип файловой системы EFI
         options = [ "fmask=0022" "dmask=0022" ]; # Параметры масок для прав доступа
       };
     "/home" =
       {
-        device = "/dev/disk/by-uuid/cd7c1f3f-2083-7908-5a0c-ee26dcd34dcb"; # UUID раздела Home
+        device = "/dev/disk/by-label/home"; # UUID раздела Home
         fsType = "ext4"; # Тип файловой системы
       };
   };
   swapDevices = [
     {
-      device = "/dev/sdb4";
+      device = "/dev/disk/by-label/swap";
     }
   ]; # Определение устройств подкачки
-  boot.resumeDevice = "/dev/sdb4";
+  boot.resumeDevice = "/dev/disk/by-label/swap";
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=1s
   '';

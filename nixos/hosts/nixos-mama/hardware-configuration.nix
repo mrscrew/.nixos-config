@@ -14,19 +14,19 @@
   fileSystems = {
     "/" =
       {
-        device = "/dev/disk/by-uuid/2989154e-0289-4c6b-a401-63fd358f719b";
+        device = "/dev/disk/by-partlabel/nixos";
         fsType = "btrfs";
         options = [ "subvol=@" ];
       };
     "/boot/efi" =
       {
-        device = "/dev/disk/by-uuid/284B-4617";
+        device = "/dev/disk/by-partlabel/boot";
         fsType = "vfat";
         options = [ "fmask=0022" "dmask=0022" ];
       };
     "/home" =
       {
-        device = "/dev/disk/by-uuid/b8f7aab8-9604-4ec8-91a0-de7282961f88";
+        device = "/dev/disk/by-partlabel/home";
         fsType = "btrfs";
       };
   };

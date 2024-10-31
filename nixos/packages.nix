@@ -51,7 +51,7 @@
     wget # Утилита для загрузки файлов из интернета
     zram-generator # Генерация сжатых блочных устройств
     appimage-run
-    webkitgtk_6_0
+    webkitgtk_4_1
 
     # Темы и иконки
     numix-gtk-theme # GTK-тема Numix

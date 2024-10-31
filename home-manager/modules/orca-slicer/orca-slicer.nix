@@ -3,7 +3,7 @@
 { appimageTools, fetchurl }:
 let
   pname = "orca-slicer";
-  version = "2.1.1";
+  version = "2.2.0";
 
   src = fetchurl {
     url = "https://github.com/SoftFever/OrcaSlicer/releases/download/v${version}/OrcaSlicer_Linux_V${version}.AppImage";

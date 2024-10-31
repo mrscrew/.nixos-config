@@ -21,7 +21,7 @@ appimageTools.wrapType2
 {
   inherit pname version src;
 
-  extraPkgs = pkgs: with pkgs; [ webkitgtk_6_0 ];
+  extraPkgs = pkgs: with pkgs; [ webkitgtk_4_1 ];
 
   extraInstallCommands = ''
     install -m 444 -D ${appimageContents}/OrcaSlicer.desktop $out/share/applications/OrcaSlicer.desktop

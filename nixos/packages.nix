@@ -75,8 +75,8 @@
     #cups-bjnp
     #canon-cups-ufr2
     #canon-capt
-    foo2zjs
-    hplip
+    #foo2zjs
+    #hplip
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

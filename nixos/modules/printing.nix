@@ -1,8 +1,6 @@
-{
+{ pkgs, ... }: {
   services.printing = {
     enable = true;
-    # drivers = [ pkgs.hplipWithPlugin ];
-    # drivers = [ pkgs.hplip ];
-    drivers = [ foo2zjs ];
+    drivers = [ pkgs.hplipWithPlugin pkgs.foo2zjs pkgs.carps-cups];
   };
 }

@@ -69,6 +69,10 @@
 
     # Другие утилиты
     home-manager # Управление конфигурацией
+    
+    # Драйверы
+    cups-bjnp
+    canon-cups-ufr2
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

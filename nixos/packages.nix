@@ -71,9 +71,10 @@
     home-manager # Управление конфигурацией
     
     # Драйверы
-    cups-bjnp
-    canon-cups-ufr2
-    canon-capt
+    #cups-bjnp
+    #canon-cups-ufr2
+    #canon-capt
+    foo2zjs
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

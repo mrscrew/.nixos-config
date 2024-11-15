@@ -3,6 +3,6 @@
     enable = true;
     # drivers = [ pkgs.hplipWithPlugin ];
     # drivers = [ pkgs.hplip ];
-    drivers = [ pkgs.foo2zjs ];
+    drivers = [ foo2zjs ];
   };
 }

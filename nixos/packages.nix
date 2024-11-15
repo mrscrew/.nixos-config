@@ -73,6 +73,7 @@
     # Драйверы
     cups-bjnp
     canon-cups-ufr2
+    canon-capt
 
     # Расширения GNOME
     gnomeExtensions.appindicator # Индикатор приложений GNOME

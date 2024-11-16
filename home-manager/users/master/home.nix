@@ -56,6 +56,9 @@
       # 3D-печать
       #prusa-slicer # Слайсер для 3D-печати
 
+      # Эмулятор android
+      genymotion
+
       # Дополнительные утилиты
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland
       winetricks # Настройка Wine

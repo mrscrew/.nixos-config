@@ -60,6 +60,7 @@
       genymotion
 
       # Дополнительные утилиты
+      gparted
       wineWowPackages.waylandFull # Wine с поддержкой 32/64-bit и Wayland
       winetricks # Настройка Wine
     ];

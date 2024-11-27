@@ -7,6 +7,7 @@
 
     shellAliases =
       let
+        host_name = "$HOST"; 
         flakeDir = "~/.nixos-config";
       in
       {
@@ -16,10 +17,10 @@
         gcu = "echo Очистка профиля пользователя && nix-collect-garbage -d";
 
         # Обновить систему и пересобрать конфигурацию для определенной системы
-        upg = "echo Введите название обновляемой системы: && read flake_name && \
+        upg = "echo Полное обновление системы:$HOST && \
               echo Обновляю каналы && sudo nix-channel --update && \
-              echo Пересобираю конфигурасию для $flake_name && \
-              sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$flake_name";
+              echo Пересобираю конфигурасию для $HOST && \
+              sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$HOST";
 
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
 

@@ -62,7 +62,7 @@
     numix-icon-theme-circle # Круглая тема иконок Numix
     numix-cursor-theme # Тема курсора Numix
 
-    qt5ct # Утилита для управления темами Qt5
+    libsForQt5.qt5ct # Утилита для управления темами Qt5
     adwaita-qt # Тема Adwaita
     materia-theme # Тема Materia
 

@@ -17,12 +17,12 @@
         gcu = "echo Очистка профиля пользователя && nix-collect-garbage -d";
 
         # Обновить систему и пересобрать конфигурацию для определенной системы
-        upg = "echo Полное обновление системы:$HOST && \
+        upg = "echo Полное обновление системы: $HOST && \
               echo Обновляю каналы && sudo nix-channel --update && \
               echo Пересобираю конфигурасию для $HOST && \
               sudo nixos-rebuild switch --upgrade --flake ${flakeDir}/.#$HOST";
 
-        rb = "sudo nixos-rebuild switch --flake ${flakeDir}/.#nixos-master";
+        rb = "sudo nixos-rebuild switch --flake ${flakeDir}.#nixos-master";
 
         # Автоматизация работы с флейками
         flks = "nix flake show ${flakeDir}"; # Показать информацию о флейке

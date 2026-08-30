@@ -7,7 +7,7 @@
     ./bluetooth.nix
     ./printing.nix
     ./trim.nix
-    ./xserver.nix
+    ./niri-noctalia.nix
     ./virtmanager.nix
     ./env.nix
   ];

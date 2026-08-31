@@ -25,7 +25,7 @@
 - **VS Code** с плагинами: Markdown lint, Nix IDE, Docker, Python, Remote SSH, YAML, русский языковой пакет, а также AI-ассистенты **SourceCraft Code Assistant** (Yandex) и **Koda**;
 - **yandex-browser-stable** (последняя версия из репозитория Яндекса).
 
-Остальной инструментарий — продуктивные CLI-утилиты (neovim, tmux, ripgrep, fd, fzf, bat, eza, zoxide, btop, lazygit, jq, docker и др.).
+Остальной инструментарий — продуктивные CLI-утилиты (micro, tmux, ripgrep, fd, fzf, bat, eza, zoxide, btop, lazygit, jq, docker и др.).
 
 ## Требования
 

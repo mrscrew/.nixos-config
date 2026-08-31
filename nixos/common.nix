@@ -2,6 +2,10 @@
   # Общие настройки, одинаковые для всех хостов.
   # Здесь НЕ затрагиваются fileSystems и swapDevices — они специфичны для каждого хоста.
 
+  # Целевой target для systemd: graphical.target запускает greetd (графический вход).
+  # Без этого система загружается в multi-user.target (консоль).
+  boot.target = "graphical.target";
+
   # Часовой пояс
   time.timeZone = "Europe/Moscow";
   time.hardwareClockInLocalTime = true;
@@ -50,6 +54,12 @@
 
   # Разрешение сборки несвободных пакетов
   nixpkgs.config = { allowUnfree = true; };
+
+  # Polkit — управление разрешениями для системных сервисов (нужен для GUI-уведомлений)
+  services.polkit.enable = true;
+
+  # AccountsService — нужен для greetd / Noctalia Greeter (показывает имена пользователей)
+  services.accounts-daemon.enable = true;
 
   # Версия состояния системы (оставляем как было при первом развёртывании)
   system.stateVersion = "24.05";

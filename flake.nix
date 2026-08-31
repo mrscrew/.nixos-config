@@ -40,7 +40,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, noctalia, noctalia-greeter, ... }:
+  outputs = { self, nixpkgs, home-manager, noctalia, noctalia-greeter, ... }@outputs:
     let
       system = "x86_64-linux"; # Архитектура системы
 

@@ -1,0 +1,32 @@
+```
+# Nix-related ignores
+.result
+*.drv
+*.nar
+*.nix-cache-info
+.nix-gcroots/
+.nix-profile/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build artifacts (if any)
+dist/
+build/
+target/
+```

@@ -1,26 +1,17 @@
-{ pkgs, inputs, ... }:
-
-let
-  # SourceCraft Code Assistant (расширение Yandex Cloud), официальный VSIX из хранилища Яндекса
-  sourcecraft-code-assist = pkgs.vscode-utils.buildVscodeExtensionFromVsix {
-    name = "sourcecraft-code-assist";
-    src = pkgs.fetchurl {
-      url = "https://storage.yandexcloud.net/sourcecraft-code-assistant/plugins/vscode/stable/yandex-cloud-code-assist.vsix";
-      sha256 = "8bf0218f5e880ad96b5f0f50f84873125be9a2f176804f0f789df3722271cb11";
-    };
-  };
-in
-{
-  # Импорт конфигураций пользователя
+{ pkgs, inputs, ... }: {
+  # Импорт конфигураций пользователя master
+  # Включает Zsh, Git, htop, курсор, браузер, VS Code и Noctalia
   imports = [
-    ./zsh.nix                   # Настройки Zsh
+    ./zsh.nix                   # Настройки Zsh (уникальные алиасы)
+    ../../modules/zsh/common.nix   # Общая конфигурация Zsh
     ../../modules/git.nix       # Настройки Git
     ../../modules/htop.nix      # Настройки htop
     ../../modules/cursor.nix    # Тема курсора
     ../../modules/yandex-browser/default.nix   # Яндекс.Браузер (последняя версия)
+    ../../modules/vscode.nix    # VS Code с расширениями
     inputs.noctalia.homeModules.default   # Модуль Noctalia (десктоп-шелл)
   ];
-
+  
   # Разрешение несвободных пакетов и небезопасной версии Яндекс.Браузера
   nixpkgs.config = {
     allowUnfree = true;
@@ -54,7 +45,7 @@ in
   home = {
     username = "master";                    # Имя пользователя
     homeDirectory = "/home/master";         # Домашняя директория
-    stateVersion = "24.05";                 # Версия состояния
+    stateVersion = "26.05";                 # Версия состояния (обновлено до 26.05)
 
     # Файлы в домашней директории
     file = {
@@ -63,24 +54,9 @@ in
     };
 
     # Графические приложения (единственные разрешённые; Яндекс.Браузер — из модуля)
+    # VS Code вынесен в отдельный модуль vscode.nix
     packages = with pkgs; [
-      # VS Code с текущим набором плагинов
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          davidanson.vscode-markdownlint # Линтер Markdown
-          jnoortheen.nix-ide             # Поддержка Nix
-          ms-azuretools.vscode-docker    # Поддержка Docker
-          ms-ceintl.vscode-language-pack-ru # Русский языковой пакет
-          ms-python.python               # Поддержка Python
-          ms-vscode-remote.remote-ssh    # Удалённый SSH
-          redhat.vscode-yaml             # Поддержка YAML
-        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          { name = "remote-ssh-edit"; publisher = "ms-vscode-remote"; version = "0.47.2"; sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g"; }
-          { name = "koda"; publisher = "Koda"; version = "1.1.0"; sha256 = "b33cc64762a302c81e970ef7dbda138ed0acc6cadefef81bab431f310952d638"; }
-        ] ++ [
-          sourcecraft-code-assist        # SourceCraft Code Assistant (AI-ассистент)
-        ];
-      })
+      # Дополнительные пакеты при необходимости
     ];
   };
 }

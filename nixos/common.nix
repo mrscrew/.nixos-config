@@ -61,6 +61,6 @@
   # AccountsService — нужен для greetd / Noctalia Greeter (показывает имена пользователей)
   services.accounts-daemon.enable = true;
 
-  # Версия состояния системы (оставляем как было при первом развёртывании)
-  system.stateVersion = "24.05";
+  # Версия состояния системы (обновлено до 26.05 для совместимости с новой версией NixOS)
+  system.stateVersion = "26.05";
 }

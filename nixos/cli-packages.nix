@@ -1,15 +1,7 @@
 { pkgs, ... }: {
-  # Системный набор пакетов: базовые сервисы, продуктивные CLI-утилиты и шрифты.
-  # Графические приложения сведены к минимуму (VS Code и Яндекс.Браузер задаются в Home Manager).
-
-  # Сервисы
-  services.openssh.enable = true;                 # SSH-сервер
-  virtualisation.docker.enable = true;            # Docker (демон)
-
-  # Поддержка AppImage-приложений через binfmt
-  programs.appimage.binfmt = true;
-
-  # Продуктивные CLI-утилиты
+  # Модуль CLI-утилит для командной строки
+  # Продуктивные инструменты: терминал, поиск, навигация, мониторинг, разработка
+  
   environment.systemPackages = with pkgs; [
     # Терминал и редактирование
     kitty                # графический терминал для сессии Wayland
@@ -45,12 +37,5 @@
     file                 # определение типа файлов
     usbutils             # утилиты USB
     dconf-editor         # редактор настроек
-  ];
-
-  # Шрифты
-  fonts.packages = with pkgs; [
-    noto-fonts           # базовые шрифты Noto
-    noto-fonts-emoji     # эмодзи Noto
-    font-awesome         # иконки (для баров и уведомлений)
   ];
 }

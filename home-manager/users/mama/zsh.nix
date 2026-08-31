@@ -1,38 +1,32 @@
 { config, ... }: {
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    # enableAutosuggestions = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+  # Конфигурация Zsh для пользователя mama
+  # Использует общий модуль и добавляет уникальные алиасы
+  
+  imports = [ ../../modules/zsh/common.nix ];
+  
+  programs.zsh.shellAliases =
+    let
+      flakeDir = "~/.nixos-config";
+    in
+    {
+      # Пересборка конфигурации NixOS
+      rb = "sudo nixos-rebuild switch --flake ${flakeDir}#nixos-mama";
+      # Обновление флейка
+      upd = "nix flake update ${flakeDir}";
+      # Обновление системы с апгрейдом пакетов
+      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}#nixos-mama";
 
-    shellAliases =
-      let
-        flakeDir = "~/.nixos-config";
-      in
-      {
-        rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-        upd = "nix flake update ${flakeDir}";
-        upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+      # Применение конфигурации Home Manager
+      hms = "home-manager switch --flake ${flakeDir}#mama";
 
-        hms = "home-manager switch --flake ${flakeDir}";
+      # Алиасы для редактирования конфигов и пакетов
+      conf = "micro ${flakeDir}/nixos/hosts/nixos-mama/configuration.nix";
+      pkgs = "micro ${flakeDir}/nixos/cli-packages.nix";
 
-        conf = "nvim ${flakeDir}/nixos/configuration.nix";
-        pkgs = "nvim ${flakeDir}/nixos/packages.nix";
-
-        ll = "ls -l";
-        v = "nvim";
-        se = "sudoedit";
-        ff = "fastfetch";
-      };
-
-    history.size = 10000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "sudo" ];
-      theme = "agnoster"; # blinks is also really nice
+      # Прочие утилиты
+      ll = "ls -l";
+      v = "micro";
+      se = "sudoedit";
+      ff = "fastfetch";
     };
-  };
 }

@@ -4,7 +4,7 @@
 
   # Целевой target для systemd: graphical.target запускает greetd (графический вход).
   # Без этого система загружается в multi-user.target (консоль).
-  boot.target = "graphical.target";
+  systemd.defaultUnit = "graphical.target";
 
   # Часовой пояс
   time.timeZone = "Europe/Moscow";

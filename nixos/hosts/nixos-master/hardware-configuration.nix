@@ -35,9 +35,11 @@
     }
   ]; # Определение устройств подкачки
   boot.resumeDevice = "/dev/disk/by-partlabel/swap";
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=1s
-  '';
+  systemd.sleep.settings.Sleep = {
+    AllowHibernation = "yes";
+    # Добавьте сюда другие параметры из вашей старой extraConfig, если они там были:
+    # AllowSuspend = "yes";
+  };
 
 
   networking.useDHCP = lib.mkDefault true; # Включить DHCP для всех интерфейсов

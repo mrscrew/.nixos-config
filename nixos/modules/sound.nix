@@ -1,7 +1,7 @@
 {
   # Модуль настройки звуковой подсистемы PipeWire.
   # Заменяет PulseAudio на современный PipeWire с поддержкой ALSA, JACK и Bluetooth.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

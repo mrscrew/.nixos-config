@@ -56,7 +56,7 @@
   nixpkgs.config = { allowUnfree = true; };
 
   # Polkit — управление разрешениями для системных сервисов (нужен для GUI-уведомлений)
-  services.polkit.enable = true;
+  security.polkit.enable = true;
 
   # AccountsService — нужен для greetd / Noctalia Greeter (показывает имена пользователей)
   services.accounts-daemon.enable = true;
